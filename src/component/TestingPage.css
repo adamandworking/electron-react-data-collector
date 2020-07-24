@@ -10,3 +10,34 @@
     width: 1.25rem;
     height: 1.25rem;
 }
+
+.wider-button{
+    width:200px;
+}
+
+.circle-btn {
+    position: absolute;
+    bottom: 125px;
+    right: 75px;
+    border-radius: 50%;
+    width: 150px;
+    padding: 30px;
+    border: 1px solid black; 
+    cursor: pointer;
+  }
+
+.center{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+
+.pad150{
+    padding-top:150px;
+}
+
+.pad70{
+    padding-top:70px;
+}

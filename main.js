@@ -6,15 +6,22 @@ const url = require('url');
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    // webPreferences: {
-    //   preload: path.join(__dirname, 'preload.js')
-    // }
+    width: 1200,
+    height: 800,
+    icon: __dirname + '/public/image/logo.png',
+    webPreferences: {
+      nodeIntegration: true,
+      preload: path.join(__dirname, './renderer.js')
+    }
   })
 
-  mainWindow.loadURL('http://localhost:3000/')
-
+  // mainWindow.loadURL('http://localhost:3000/')
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, './build/index.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+  
   // and load the index.html of the app.
   // mainWindow.loadFile('public/index.html')
 
