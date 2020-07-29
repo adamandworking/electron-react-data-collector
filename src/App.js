@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import TestingPage from './component/TestingPage'
 
 function App(props) {
